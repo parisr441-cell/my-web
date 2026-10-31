@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional portfolio of Parisraja M - PGDM/MBA student with experience in finance, credit, accounting and business development." />
+  <title>Parisraja M | Professional Portfolio</title>
+  <style>
+    :root {
+      --navy: #142b4a;
+      --blue: #315f86;
+      --ink: #263442;
+      --muted: #667789;
+      --line: #dce4eb;
+      --paper: #ffffff;
+      --soft: #f2f6f9;
+      --accent: #b9955b;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: #edf1f5;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .page { max-width: 1080px; margin: 36px auto; background: var(--paper); box-shadow: 0 14px 45px rgba(20,43,74,.10); }
+    .hero {
+      background: linear-gradient(120deg, #142b4a, #244b70);
+      color: white;
+      padding: 64px 8%;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero:after {
+      content: ""; position: absolute; width: 260px; height: 260px;
+      border: 1px solid rgba(255,255,255,.15); border-radius: 50%;
+      right: -70px; top: -100px;
+      box-shadow: 0 0 0 28px rgba(255,255,255,.025), 0 0 0 58px rgba(255,255,255,.02);
+    }
+    .eyebrow { text-transform: uppercase; letter-spacing: 3px; color: #d5e0e9; font-size: .76rem; font-weight: 700; }
+    h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); line-height: 1.05; margin: 14px 0 10px; letter-spacing: -.8px; }
+    .hero-title { color: #e0e8ef; font-size: 1.05rem; letter-spacing: 1.2px; }
+    .contact { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 28px; color: #e3ebf2; font-size: .92rem; }
+    .contact a { text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.35); }
+    nav { display: flex; flex-wrap: wrap; gap: 22px; padding: 15px 8%; border-bottom: 1px solid var(--line); background: #fff; }
+    nav a { color: var(--navy); text-decoration: none; font-size: .86rem; font-weight: 650; }
+    nav a:hover { color: var(--blue); }
+    main { padding: 28px 8% 58px; }
+    section { padding: 22px 0; border-bottom: 1px solid var(--line); }
+    section:last-child { border-bottom: 0; }
+    .section-heading { display: flex; align-items: center; gap: 14px; margin: 0 0 18px; color: var(--navy); font-size: 1.15rem; letter-spacing: 1.5px; text-transform: uppercase; }
+    .section-heading:after { content: ""; height: 1px; background: var(--line); flex: 1; }
+    .summary { max-width: 850px; color: #425365; font-size: 1.02rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .chip { background: var(--soft); border: 1px solid var(--line); padding: 11px 14px; border-radius: 5px; font-size: .9rem; }
+    .experience, .education-item { padding: 18px 20px; margin-bottom: 14px; background: #fbfcfd; border: 1px solid var(--line); border-left: 3px solid var(--blue); border-radius: 4px; }
+    .item-top { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; }
+    h3 { margin: 0; color: var(--navy); font-size: 1.05rem; }
+    .role { margin: 3px 0 8px; color: var(--blue); font-weight: 650; font-size: .92rem; }
+    .date { color: var(--muted); font-size: .82rem; white-space: nowrap; }
+    ul { margin: 8px 0 0; padding-left: 20px; color: #465767; font-size: .91rem; }
+    li { margin: 4px 0; }
+    .edu-detail { margin-top: 4px; color: #526273; font-size: .91rem; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .info-card { background: var(--soft); padding: 18px; border-radius: 5px; border: 1px solid var(--line); }
+    .info-card h3 { margin-bottom: 8px; }
+    .publication { border-left: 3px solid var(--accent); padding: 5px 0 5px 17px; }
+    footer { background: var(--navy); color: #e2eaf1; text-align: center; padding: 24px 8%; font-size: .88rem; }
+    footer a { color: white; }
+    .print-btn { position: fixed; right: 22px; bottom: 22px; border: 0; background: var(--navy); color: white; padding: 12px 18px; border-radius: 30px; cursor: pointer; box-shadow: 0 5px 18px rgba(0,0,0,.18); font-weight: 650; }
+    .print-btn:hover { background: var(--blue); }
+    @media (max-width: 720px) {
+      .page { margin: 0; }
+      .hero { padding: 48px 7%; }
+      main { padding: 20px 7% 42px; }
+      nav { padding: 14px 7%; gap: 12px 18px; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .two-col { grid-template-columns: 1fr; }
+      .item-top { display: block; }
+      .date { display: block; margin-top: 3px; }
+    }
+    @media (max-width: 420px) { .grid { grid-template-columns: 1fr; } }
+    @media print {
+      body { background: white; }
+      .page { margin: 0; max-width: none; box-shadow: none; }
+      nav, .print-btn { display: none; }
+      .hero { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      section, .experience, .education-item, .info-card { break-inside: avoid; }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero" id="home">
+      <div class="eyebrow">Professional Portfolio</div>
+      <h1>Parisraja M</h1>
+      <div class="hero-title">PGDM / MBA &nbsp;|&nbsp; Business Development &nbsp;|&nbsp; Finance</div>
+      <div class="contact">
+        <a href="mailto:Parisr441@gmail.com">Parisr441@gmail.com</a>
+        <a href="tel:+916374877620">+91 6374877620</a>
+        <a href="https://www.linkedin.com/in/parisraja-m-882a1b216" target="_blank" rel="noopener">LinkedIn Profile</a>
+      </div>
+    </header>
+
+    <nav aria-label="Main navigation">
+      <a href="#about">Profile</a><a href="#competencies">Competencies</a>
+      <a href="#experience">Experience</a><a href="#education">Education</a>
+      <a href="#research">Research</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <section id="about">
+        <h2 class="section-heading">Professional Profile</h2>
+        <p class="summary">
+          PGDM student with hands-on experience in business development, lead generation,
+          market research, competitor analysis, and client relationship management. Skilled in
+          prospect identification, data management, customer engagement, and business research,
+          with proficiency in MS Excel, PowerPoint, and Power BI. Demonstrates strong communication,
+          analytical, and problem-solving skills, with a focus on supporting business growth,
+          customer acquisition, and data-driven decision-making.
+        </p>
+      </section>
+
+      <section id="competencies">
+        <h2 class="section-heading">Core Competencies</h2>
+        <div class="grid">
+          <div class="chip">Business Development</div>
+          <div class="chip">Lead Generation</div>
+          <div class="chip">Market Research</div>
+          <div class="chip">Competitor Analysis</div>
+          <div class="chip">Client Relationship Management</div>
+          <div class="chip">Financial Analysis</div>
+          <div class="chip">Data Management</div>
+          <div class="chip">Customer Engagement</div>
+          <div class="chip">Business Research</div>
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2 class="section-heading">Professional Experience</h2>
+
+        <article class="experience">
+          <div class="item-top"><h3>Veeraraghavan &amp; Co</h3><span class="date">June–August | 2026–2027</span></div>
+          <div class="role">Credit Intern · Full time</div>
+          <ul>
+            <li>Visited businesses to understand operations and identify potential credit risks.</li>
+            <li>Analysed financial information and business capital requirements.</li>
+            <li>Estimated net profit and assessed repayment capacity against proposed loan requirements.</li>
+            <li>Reviewed borrower documents and prepared information for credit reports.</li>
+            <li>Supported credit-risk evaluation and lending recommendations.</li>
+          </ul>
+        </article>
+
+        <article class="experience">
+          <div class="item-top"><h3>Shiva Texyarn Limited</h3><span class="date">January–March | 2026–2027</span></div>
+          <div class="role">Accountant Intern · Part time</div>
+          <ul>
+            <li>Managed accounting entries and maintained ledgers to support day-to-day financial operations.</li>
+            <li>Assisted with GST compliance by verifying transaction data and contributing to timely filing processes.</li>
+            <li>Supported timely payments to MSME vendors in line with statutory requirements.</li>
+            <li>Assisted with payroll activities, including PF calculations, and gained exposure to statutory compliance.</li>
+          </ul>
+        </article>
+
+        <article class="experience">
+          <div class="item-top"><h3>Adharvaa Suzuki</h3><span class="date">September–November | 2025–2026</span></div>
+          <div class="role">Spare Parts Intern · Part time</div>
+          <ul>
+            <li>Assisted with spare-parts inventory, stock records, and availability for service requirements.</li>
+            <li>Supported billing and invoicing while learning dealership software and documentation processes.</li>
+            <li>Coordinated with technicians and the sales team to provide parts on time.</li>
+            <li>Gained exposure to automobile service operations, customer handling, logistics, and basic supply-chain processes.</li>
+          </ul>
+        </article>
+
+        <article class="experience">
+          <div class="item-top"><h3>Muthoot Finance Limited</h3><span class="date">2023–2025 · May–June</span></div>
+          <div class="role">Junior Relationship Executive · Full time</div>
+          <ul>
+            <li>Assisted with daily branch operations, customer service, and documentation.</li>
+            <li>Managed walk-in inquiries and supported KYC and documentation procedures.</li>
+            <li>Managed client relationships and supported inquiries about gold loans and other financial products.</li>
+            <li>Processed loan applications and supported timely disbursement of funds.</li>
+            <li>Participated in business development, prospecting, and field visits.</li>
+            <li>Exceeded gold-loan sales targets, achieving a 100% increase in sales volume.</li>
+            <li>Used Core Banking Solution and CRM software.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="education">
+        <h2 class="section-heading">Education</h2>
+        <article class="education-item">
+          <div class="item-top"><h3>Firebird Institute of Research in Management</h3><span class="date">2025–Present</span></div>
+          <div class="edu-detail">Post Graduate Diploma in Management (PGDM) · CGPA: 7.69</div>
+        </article>
+        <article class="education-item">
+          <div class="item-top"><h3>Bishop Heber College, Tiruchirappalli</h3><span class="date">2020–2023</span></div>
+          <div class="edu-detail">Bachelor of Business Administration · CGPA: 7.49 · Bharathidasan University</div>
+        </article>
+        <article class="education-item">
+          <div class="item-top"><h3>Sri Vidya Mandir Matriculation School, Thuraiyur</h3><span class="date">2018–2020</span></div>
+          <div class="edu-detail">Higher Secondary Education · 75% · State Board, Tamil Nadu</div>
+        </article>
+        <article class="education-item">
+          <div class="item-top"><h3>Sowdambika Matriculation Higher Secondary School, Thuraiyur</h3><span class="date">2016–2018</span></div>
+          <div class="edu-detail">Secondary School Education · 85% · State Board, Tamil Nadu</div>
+        </article>
+      </section>
+
+      <section id="research">
+        <h2 class="section-heading">Research &amp; Certifications</h2>
+        <div class="two-col">
+          <div class="info-card">
+            <h3>Research Publication</h3>
+            <div class="publication">
+              <strong>Assessment of Indian Consumer Perceptions and Buying Behavior Towards Products with Sustainability Labels and Certifications</strong>
+              <p class="edu-detail">Published in <em>Arthshastra, Indian Journal of Economics and Research</em>, Vol. 13, Issue 03, No. 01, July–September 2024.</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <h3>Certifications</h3>
+            <ul>
+              <li>Google – Foundations of Digital Marketing and E-commerce</li>
+              <li>Saylor Academy – Digital Marketing and Advertising</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2 class="section-heading">Skills</h2>
+        <div class="two-col">
+          <div class="info-card">
+            <h3>Technical / Hard Skills</h3>
+            <p>MS Excel, PowerPoint, Power BI, Market Research, Lead Generation, Competitor Analysis</p>
+          </div>
+          <div class="info-card">
+            <h3>Professional / Soft Skills</h3>
+            <p>Communication, Client Relationship Management, Team Collaboration, Problem Solving, Adaptability</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-heading">Contact</h2>
+        <p><strong>Parisraja M</strong><br>
+          Email: <a href="mailto:Parisr441@gmail.com">Parisr441@gmail.com</a><br>
+          Phone: <a href="tel:+916374877620">6374877620</a><br>
+          LinkedIn: <a href="https://www.linkedin.com/in/parisraja-m-882a1b216" target="_blank" rel="noopener">linkedin.com/in/parisraja-m-882a1b216</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Parisraja M · Professional Portfolio
+    </footer>
+  </div>
+
+  <button class="print-btn" onclick="window.print()" aria-label="Print or save portfolio as PDF">Print / Save as PDF</button>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
